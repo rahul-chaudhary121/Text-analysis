@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="field">Field:</label>
+      <input type="text" class="form-control" id="fld" placeholder="Enter field" name="fld">
+    </div>
+    <div class="form-group">
+      <label for="no">Number:</label>
+      <input type="number" class="form-control" id="nm" placeholder="Enter number" name="nm">
+    </div>
+    <input type="image" onclick="image.style.display=inline;">
+    <img "{% static "yash.jpg" %}" id="image" style="display:none;">
+
+    <!--<button type="submit" class="btn btn-default" id="register"><img src="{% static "yash.jpg" %}">Go</img></button>-->
+  </form>
+</div>
+
+</body>
+
+<script>
+  $(document).ready(function(){
+    $("#register").click(function(){
+      var uname=$("#name").val();
+      var upass=$("#fld").val();
+      var unm=$("#nm").val();
+      $.get('/register',
+        {user:uname,field:upass,tno:unm},
+        function(response){
+          alert(response)
+
+        });
+    });
+  });
+</script>
+</html>

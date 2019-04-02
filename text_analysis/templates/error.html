@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="shortcut icon" href="{% static 'twitter1.png' %}" />
+	<title>Sentiment Analysis of tweets</title>
+	<style type="text/css">
+		table
+		{
+			border-radius: 25px;
+			border: 2px solid #73AD21;
+			padding: 20px; 
+			width: 500px;
+			height: 150px;
+		}
+		body
+  		{
+		    background-image:url("{% static 'bgerror.jpg' %}");
+		    background-size: 100% auto;
+		    background-repeat:no-repeat;
+		    background-attachment:fixed;
+  		}
+	</style>
+</head>
+<body>
+
+	<br><br><br><br><br><br><br>
+	<table align="center" width="200">
+		<tr>
+			<td>
+				<center><h1>No tweet found for analysis...</h1></center> 
+			</td>
+		</tr>
+	</table>  
+</body>
+</html>
