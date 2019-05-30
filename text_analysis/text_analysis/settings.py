@@ -26,8 +26,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.16.56.211', '192.168.137.1']
-
+ALLOWED_HOSTS = ['172.16.56.211', '192.168.137.1','*']
 
 # Application definition
 

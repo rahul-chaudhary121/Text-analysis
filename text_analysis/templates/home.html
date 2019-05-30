@@ -15,6 +15,14 @@
   height: 10;
   width: 10;
   }
+  .footer {
+   position: fixed;
+   left: 15;
+   bottom: 0;
+   width: 100%;
+ 
+   color: black;
+  }
 
 
   body
@@ -185,11 +193,26 @@
 <div id="loader" style="display: none;"></div>
 {% endblock %}
 <br><br><br>
-<footer>
-  <img src="{% static 'img.jpg' %}" height="200" width="200"><b> About</b><br>Rahul Gawar
-  <p>Posted by: Hege Refsnes</p>
-  <p>Contact information: <a href="mailto:someone@example.com">
-  someone@example.com</a>.</p>
-</footer>
+<div class="footer">
+  <br><br>
+
+&nbsp;<table width="900" align="center">
+  <tr>
+    <td rowspan="3"><img src="{% static 'img.jpg' %}" height="150" width="150"></td>
+     <td><b><font size="5">Rahul Gawar</font></b></td>
+     <td><img src="{% static 'linkedin.png' %}" width="30" height="30"><a href="https://www.linkedin.com/in/rahul-gawar" target="_blank">&nbsp;<font color="white"><u>rahul-gawar</u></font></a></td>
+  </tr>
+  <tr>
+    <td><font size="4">Studying Computer Science and Engineering <br>at GLA University, Mathura</font></td>
+    <td>&nbsp;&nbsp;<img src="{% static 'twit.png' %}" width="30" height="30" ><a href="https://twitter.com/rahul_gawar" target="_blank">&nbsp;<font color="white"><u>@rahul_gawar</u></font></a></td>
+  </tr>
+  <tr>
+    <td><font size="4">Batch: 2016-2020</font></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static 'insta.png' %}" width="30" height="30">
+  <a href="https://www.instagram.com/rahul.chaudhary121" target="_blank">&nbsp;<font color="white"><u>rahul.chaudhary121</u></font></a></td>
+  </tr>
+</table>
+</div>
+
 </body>
 </html>
